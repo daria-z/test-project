@@ -1,3 +1,5 @@
-import React, { Children }  from "react";
+import { RestaurantsPage } from "./pages/RestaurantsPage/RestaurantsPage";
 
-React.createElement('div', {children: 'sdf'})
+export const App = () => {
+  return <RestaurantsPage />
+}
