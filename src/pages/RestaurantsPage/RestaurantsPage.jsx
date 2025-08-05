@@ -4,11 +4,14 @@ import { Tabs } from "../../components/Tabs"
 
 import styles from "./styles.module.css"
 
-export const RestaurantsPage = () => (
-  <Layout>
+export const RestaurantsPage = ({ restaurants }) => {
+  console.log(restaurants)
+  return (
+    <Layout>
       <div className={styles.container}>
         <Tabs />
-        <Restaurant />
+        {restaurants.map(item => <Restaurant key={item.id} restaurant={item} />)}
       </div>
     </Layout>
-)
+  )
+}
