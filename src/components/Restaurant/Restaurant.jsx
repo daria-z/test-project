@@ -5,7 +5,8 @@ export const Restaurant = ({ restaurant }) => {
   console.log(restaurant.menu)
   return (<div className={styles.container}>
     <div>{restaurant.name}</div>
-    <Menu products={restaurant.menu}/>
+    {restaurant.menu && <Menu products={restaurant.menu} className={styles.menu}/>}
     <div>Reviews</div>
   </div>)
 }
+
